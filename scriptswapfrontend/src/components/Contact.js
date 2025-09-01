@@ -31,7 +31,7 @@ const Contact = () => {
         "template_8jpb5hd",
         {
           from_name: form.name,
-          to_name: "Ganesh Bhabad",
+          to_name: "Vikash Tomar",
           from_email: form.email,
           to_email: "webdevelopmentapi2022@gmail.com",
           message: form.message,
