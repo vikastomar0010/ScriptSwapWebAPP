@@ -1,0 +1,19 @@
+TypeError: path must be absolute or specify root to res.sendFile 
+
+for such errorwe can use __dirname+'filename'
+
+but the __dirname is not present in the es module u can solve issue as we did in code
+
+
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Construct a path to a file that doesn't exist yet
+const fileName = 'example.txt';
+const filePath = join(__dirname, fileName);
+
+console.log(filePath);  // Outputs: /absolute/path/to/example.txt
